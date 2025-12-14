@@ -1,0 +1,99 @@
+/**
+ * @file ControlCenter.h
+ * @brief Control Center for order scheduling and KPI computation
+ */
+
+#ifndef CONTROL_CENTER_H
+#define CONTROL_CENTER_H
+
+/******************************Project Headers*****************************************/
+#include "Order.h"
+#include "Product.h"
+#include "Warehouse.h"
+
+/**************************************************************************************/
+
+/*****************************Standard Libraries***************************************/
+// Forward declarations
+class AssemblyStation;
+class AGV;
+#include <vector>
+#include <map>
+#include <mutex>
+#include <thread>
+#include <atomic>
+#include <fstream>
+
+/*************************************************************************************/
+
+/****************************User define's variables**********************************/
+/**
+ * @enum SchedulingPolicy
+ * @brief Enumeration of scheduling policies
+ */
+enum class SchedulingPolicy {
+    FIFO,     // First In First Out (0)
+    PRIORITY, // Highest Priority First (1)
+    SPT,      // Shortest Processing Time (2)
+    EDD       // Earliest Due Date (3)
+};
+
+/*************************************************************************************/
+/****************************ControlCenter Class Definition***************************/
+
+/**
+ * @class ControlCenter
+ * @brief Manages order scheduling, simulation control, and KPI computation
+ */
+class ControlCenter {
+private:
+    std::vector<Order> orders;
+    std::map<std::string, Product> products;
+    AssemblyStation* assembly_station;
+    std::vector<AGV*>* agv_fleet;
+    
+    SchedulingPolicy policy;
+    std::atomic<int> current_sim_time_minutes; // Current simulation time in minutes
+    std::atomic<bool> simulation_running;      // Flag to control simulation
+    std::thread scheduler_thread;
+    std::mutex log_mutex;
+    std::ofstream log_file;                   
+    /*************Functions***********************/
+    void scheduler_loop();
+    void release_order(const Order& order);
+    void compute_kpis();
+    void write_kpi_report(double avg_lead_time,
+                          double station_utilization,
+                          double throughput,
+                          double agv_utilization);
+    
+    // Logging
+    void log_event(const std::string& message);
+    std::string format_time(int minutes) const;
+    /*********************************************/
+public:
+    ControlCenter();
+    ~ControlCenter();
+    
+    /******************User Functions************************/
+    bool load_orders(const std::string& filename);
+    bool load_bom(const std::string& filename);
+    bool load_warehouse(const std::string& filename, Warehouse* warehouse);
+    /********************************************************/
+
+    /******************Simulation Control************************/
+    void start_simulation(AssemblyStation* station, std::vector<AGV*>* fleet);
+    void stop_simulation();
+    void set_scheduling_policy(SchedulingPolicy pol) { policy = pol; }
+    
+    std::vector<Order>& get_orders() { return orders; }
+    std::map<std::string, Product>& get_products() { return products; }
+    
+    int get_simulation_time() const { return current_sim_time_minutes.load(); }
+    void set_simulation_time(int minutes) { current_sim_time_minutes = minutes; }
+    /********************************************************/
+};
+
+/*************************************************************************************/
+#endif /* CONTROL_CENTER_H */
+

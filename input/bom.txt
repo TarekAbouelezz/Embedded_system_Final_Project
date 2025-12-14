@@ -1,0 +1,15 @@
+# BOM file format:
+# product_id assembly_base_time_in_minutes
+# product_id component_id quantity
+# product_id component_id quantity
+# ...
+
+P1 30
+P1 C1 12
+P1 C3 4
+
+P2 40
+P2 C2 9
+P2 C1 7
+
+

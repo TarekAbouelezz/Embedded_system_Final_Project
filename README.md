@@ -19,6 +19,112 @@ This project simulates a flexible assembly system with the following components:
 - **Performance Metrics**: Automated KPI computation (lead time, utilization, throughput).
 - **Event Logging**: Detailed simulation logs for analysis.
 
+## Building the Project
+
+### Prerequisites
+
+- CMake 3.10 or higher
+- C++17 compatible compiler (GCC 7+, Clang 5+, MSVC 2017+)
+- Thread support (pthread on Unix systems)
+
+### Build Instructions
+
+```bash
+# Create build directory
+mkdir build
+cd build
+
+# Configure with CMake
+cmake ..
+
+# Build the project
+cmake --build .
+
+# On Windows with Visual Studio
+cmake --build . --config Release
+```
+
+The executable will be created as `fas_simulator` (or `fas_simulator.exe` on Windows).
+
+## Input Files
+
+Place the following files in the `input/` directory:
+
+### orders.txt
+
+Format: `HH MM product_id priority`
+
+```
+08 10 P1 1
+08 15 P2 3
+08 45 P1 2
+```
+
+### bom.txt
+
+Format: Product definition followed by component requirements
+
+```
+P1 30
+P1 C1 12
+P1 C3 4
+
+P2 40
+P2 C2 9
+P2 C1 7
+```
+
+### warehouse.txt
+
+Format: `component_id initial_quantity`
+
+```
+C1 50
+C2 30
+C3 20
+```
+
+## Running the Simulation
+
+```bash
+# From build directory
+./fas_simulator
+
+# Or with full path
+./build/fas_simulator
+```
+
+Ensure that the `input/` directory contains the required files before running.
+
+## Output Files
+
+The simulation generates two output files in the `output/` directory:
+
+### sim_log.txt
+
+Detailed event log with timestamps:
+
+```
+08:10 Order released: P1 (Priority: 1)
+08:10 AGV1 arrived at warehouse to pick component C1
+08:12 AGV1 arrived at assembly station
+...
+```
+
+### kpi_report.txt
+
+Key Performance Indicators:
+
+```
+========================================
+  Key Performance Indicators Report  
+========================================
+
+Average Lead Time: 45.5 minutes
+Assembly Station Utilization: 75.2%
+Throughput: 8.5 orders/hour
+Average AGV Utilization: 62.3%
+```
 
 ## System Architecture
 
