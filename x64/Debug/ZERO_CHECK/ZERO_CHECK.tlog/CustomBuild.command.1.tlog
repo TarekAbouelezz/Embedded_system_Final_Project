@@ -1,0 +1,10 @@
+^D:\TAREK\PADOVA STUDY\EMBEDDED_SYSTEMS\PROJECT\EMBEDDED_SYSTEM_FINAL_PROJECT\CMAKEFILES\B0D5524E4E38A06DE0E191D4CD443F47\GENERATE.STAMP.RULE
+setlocal
+"D:\Tarek\Padova study\Embedded_systems\bin\cmake.exe" "-SD:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project" "-BD:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/FlexibleAssemblySystem.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

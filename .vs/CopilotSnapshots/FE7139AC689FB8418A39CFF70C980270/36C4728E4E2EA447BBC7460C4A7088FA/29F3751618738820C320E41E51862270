@@ -1,0 +1,103 @@
+﻿/**
+ * @file ControlCenter.h
+ * @brief Control Center for order scheduling and KPI computation
+ */
+
+#ifndef CONTROL_CENTER_H
+#define CONTROL_CENTER_H
+
+/******************************Project Headers*****************************************/
+#include "Order.h"
+#include "Product.h"
+#include "Warehouse.h"
+
+/**************************************************************************************/
+
+/*****************************Standard Libraries***************************************/
+// Forward declarations
+class AssemblyStation;
+class AGV;
+#include <vector>
+#include <map>
+#include <mutex>
+#include <thread>
+#include <atomic>
+#include <fstream>
+#include <condition_variable>
+
+/*************************************************************************************/
+
+/**
+ * @enum SchedulingPolicy
+ * @brief Enumeration of scheduling policies
+ */
+enum class SchedulingPolicy {
+    FIFO,
+    PRIORITY,
+    SPT,
+    EDD
+};
+
+/**
+ * @class ControlCenter
+ * @brief Manages order scheduling, simulation control, and KPI computation
+ */
+class ControlCenter {
+private:
+    std::vector<Order> orders;
+    std::map<std::string, Product> products;
+    AssemblyStation* assembly_station;
+    std::vector<AGV*>* agv_fleet;
+    
+    SchedulingPolicy policy;
+    std::atomic<int> current_sim_time_minutes;
+    std::atomic<bool> simulation_running;
+    std::atomic<bool> has_stopped;
+    std::thread scheduler_thread;
+    std::mutex log_mutex;
+    std::ofstream log_file;
+
+    // Completion coordination
+    std::mutex completion_mutex;
+    std::condition_variable completion_cv;
+    std::atomic<int> completed_orders;
+    std::atomic<bool> scheduler_done;
+
+    bool enable_diag_logs;
+
+    void scheduler_loop();
+    void release_order(const Order& order);
+    void compute_kpis();
+    void write_kpi_report(double avg_lead_time,
+                          double station_utilization,
+                          double throughput,
+                          double agv_utilization);
+    std::string format_time(int minutes) const;
+public:
+    ControlCenter();
+    ~ControlCenter();
+
+    bool load_orders(const std::string& filename);
+    bool load_bom(const std::string& filename);
+    bool load_warehouse(const std::string& filename, Warehouse* warehouse);
+
+    void start_simulation(AssemblyStation* station, std::vector<AGV*>* fleet);
+    void stop_simulation();
+    void set_scheduling_policy(SchedulingPolicy pol) { policy = pol; }
+    
+    void mark_order_completed(int order_id, int completion_time_minutes);
+    void mark_order_canceled(int order_id);
+    void wait_until_all_orders_complete();
+    
+    std::vector<Order>& get_orders() { return orders; }
+    std::map<std::string, Product>& get_products() { return products; }
+    
+    int get_simulation_time() const { return current_sim_time_minutes.load(); }
+    void set_simulation_time(int minutes) { current_sim_time_minutes = minutes; }
+
+    void log_event(const std::string& message);
+    void set_diag_logging(bool enabled) { enable_diag_logs = enabled; }
+};
+
+#endif /* CONTROL_CENTER_H */
+

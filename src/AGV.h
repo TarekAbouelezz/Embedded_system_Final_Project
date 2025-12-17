@@ -6,12 +6,22 @@
 #ifndef AGV_H
 #define AGV_H
 
+/******************************Project Headers*****************************************/
 #include <string>
 #include <mutex>
 #include <thread>
 #include <atomic>
 #include <condition_variable>
+/*************************************************************************************/
 
+// Forward declaration to avoid circular include
+class AssemblyStation;
+
+/****************************AGV Class Definition*************************************/
+/**
+ * @enum AGVState
+ * @brief Represents the various states of an AGV
+ */
 enum class AGVState {
     IDLE,
     TO_WAREHOUSE,
@@ -21,15 +31,25 @@ enum class AGVState {
     RETURNING
 };
 
+/**
+ * @struct AGVTask
+ * @brief Represents a task assigned to an AGV
+ */
 struct AGVTask {
-    std::string component_id;
+    std::string component_id;   // For finished product, holds product_id
     int quantity;
-    std::string destination;  // "ASSEMBLY_STATION" or "WAREHOUSE"
+    std::string destination;    // "ASSEMBLY_STATION" or "WAREHOUSE"
     bool is_complete;
+    AssemblyStation* notify_station;   // Optional callback target
+    bool is_finished_product;          // true when transporting finished product back to warehouse
     
-    AGVTask() : quantity(0), is_complete(false) {}
+    AGVTask() : quantity(0), is_complete(false), notify_station(nullptr), is_finished_product(false) {}
 };
 
+/**
+ * @class AGV
+ * @brief Represents an Automated Guided Vehicle (AGV) with state machine
+ */
 class AGV {
 private:
     int agv_id;
@@ -56,16 +76,18 @@ public:
     void start();
     void stop();
     void assign_task(const std::string& component_id, int quantity, 
-                     const std::string& destination);
+                     const std::string& destination,
+                     AssemblyStation* notify_station,
+                     bool is_finished_product = false);
     bool is_idle() const;
     AGVState get_state() const;
     int get_id() const { return agv_id; }
     AGVTask get_current_task() const;
     
     // Statistics
-    int total_operations;
-    int busy_time_minutes;
+    std::atomic<int> total_operations;
+    std::atomic<int> busy_time_minutes;
 };
-
+/*************************************************************************************/
 #endif /* AGV_H */
 

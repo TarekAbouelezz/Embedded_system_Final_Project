@@ -10,300 +10,253 @@
 #include "AGV.h"
 /**************************************************************************************/
 
-/*****************************Standard Libraries***************************************/
 #include <iostream>
 #include <algorithm>
 #include <sstream>
 #include <iomanip>
 #include <thread>
-/**************************************************************************************/
+#include <chrono>
 
-/*****************************Namespace Usage******************************************/
 using std::cout;
 using std::endl;
 using std::stringstream;
-/*************************************************************************************/
 
-/****************************ControlCenter Methods************************************/
-
-/**
- * @brief Constructor for ControlCenter
- * Initializes scheduling policy and simulation flags
- */
-ControlCenter::ControlCenter() //constructor 
+ControlCenter::ControlCenter()
     : policy(SchedulingPolicy::FIFO),
       current_sim_time_minutes(0),
       simulation_running(false),
-      assembly_station(nullptr) {
-    
-    // Open log file
+      has_stopped(false),
+      assembly_station(nullptr),
+      completed_orders(0),
+      scheduler_done(false),
+      enable_diag_logs(true) {
     log_file.open("output/sim_log.txt", std::ios::out);
     if (log_file.is_open()) {
         log_file << "=== Simulation Log ===\n\n";
     }
 }
 
-
-/**
- * @brief Destructor for ControlCenter
- * Ensures simulation is stopped and log file is closed
- */
-ControlCenter::~ControlCenter() { //destructor
-    stop_simulation();
+ControlCenter::~ControlCenter() {
+    if (!has_stopped.load()) {
+        stop_simulation();
+    }
     if (log_file.is_open()) {
         log_file.close();
     }
 }
 
-/**
- * @brief Load orders from a file
- * @param filename Path to the orders file
- * @return true if loading is successful, false otherwise
- */
 bool ControlCenter::load_orders(const std::string& filename) {
     return FileHandler::read_orders_file(filename, orders);
 }
 
-
-/**
- * @brief Load Bill of Materials (BOM) from a file
- * @param filename Path to the BOM file
- * @return true if loading is successful, false otherwise
- */
 bool ControlCenter::load_bom(const std::string& filename) {
     return FileHandler::read_bom_file(filename, products);
 }
 
-
-/**
- * @brief Load warehouse inventory from a file
- * @param filename Path to the warehouse file
- * @param warehouse Pointer to acess the Warehouse object
- * @return true if loading is successful, false otherwise
- */
 bool ControlCenter::load_warehouse(const std::string& filename, Warehouse* warehouse) {
     std::map<std::string, int> inventory;
     if (!FileHandler::read_warehouse_file(filename, inventory)) {
         return false;
     }
-    
-    // Populate warehouse with initial inventory
     for (const auto& item : inventory) {
         warehouse->add_component(item.first, item.second);
     }
-    
     return true;
 }
 
-
-/**
- * @brief Start the simulation
- * @param station Pointer to the AssemblyStation
- * @param fleet Pointer to the vector of AGVs
- */
 void ControlCenter::start_simulation(AssemblyStation* station, std::vector<AGV*>* fleet) {
     assembly_station = station;
     agv_fleet = fleet;
+
+    if (assembly_station) {
+        assembly_station->set_products(&products);
+        assembly_station->set_control_center(this);
+        assembly_station->set_simulation_time(current_sim_time_minutes.load());
+    }
+
+    if (agv_fleet) {
+        for (auto* agv : *agv_fleet) {
+            if (agv) agv->start();
+        }
+    }
+
+    if (assembly_station) {
+        assembly_station->start();
+    }
+
     simulation_running = true;
-    
-    // Sort orders based on scheduling policy
+    has_stopped = false;
+    completed_orders = 0;
+    scheduler_done = false;
+
     if (policy == SchedulingPolicy::FIFO) {
         std::sort(orders.begin(), orders.end(), 
-            [](const Order& a, const Order& b) {
-                return a.release_time_minutes < b.release_time_minutes;
-            });
+            [](const Order& a, const Order& b) { return a.release_time_minutes < b.release_time_minutes; });
     } else if (policy == SchedulingPolicy::PRIORITY) {
         std::sort(orders.begin(), orders.end(), 
             [](const Order& a, const Order& b) {
-                if (a.priority != b.priority) {
-                    return a.priority > b.priority; // Higher priority first
-                }
+                if (a.priority != b.priority) return a.priority > b.priority;
                 return a.release_time_minutes < b.release_time_minutes;
             });
     }
-    
-    // Start scheduler thread
+
     scheduler_thread = std::thread(&ControlCenter::scheduler_loop, this);
-    
     log_event("Simulation started");
 }
 
-
-/**
- * @brief Stop the simulation
- */
 void ControlCenter::stop_simulation() {
+    if (has_stopped.exchange(true)) { return; }
+
     simulation_running = false;
-    if (scheduler_thread.joinable()) {
-        scheduler_thread.join();
+    if (scheduler_thread.joinable()) { scheduler_thread.join(); }
+
+    if (assembly_station) { assembly_station->stop(); }
+
+    if (agv_fleet) {
+        bool all_idle = false; int spin = 0;
+        while (!all_idle && spin < 200) {
+            all_idle = true;
+            for (auto* agv : *agv_fleet) { if (agv && !agv->is_idle()) { all_idle = false; break; } }
+            if (!all_idle) std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            ++spin;
+        }
+        for (auto* agv : *agv_fleet) { if (agv) agv->stop(); }
     }
-    
-    compute_kpis(); // Compute KPIs at the end of simulation
+
+    compute_kpis();
+    log_event("KPIs computed and saved");
     log_event("Simulation stopped");
 }
 
-
-/**
- * @brief Main scheduler loop
- * Releases orders based on their release times and scheduling policy
- */
-void ControlCenter::scheduler_loop() {
-    int sim_start_time = 0;             // Minutes from midnight
-    current_sim_time_minutes = sim_start_time;
-    
-    for (auto& order : orders) {
-        // Wait until release time
-        while (simulation_running && 
-               current_sim_time_minutes < order.release_time_minutes) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            // In real simulation, time would advance based on events
-        }
-        
-        if (!simulation_running) break;
-        
-        // Release order
-        release_order(order);
-        current_sim_time_minutes = order.release_time_minutes;
-    }
-    
-    // Wait for all orders to complete
-    bool all_complete = false;
-    while (simulation_running && !all_complete) {
-        all_complete = true;
-        for (const auto& order : orders) {
-            if (!order.is_completed) {
-                all_complete = false;
-                break;
-            }
-        }
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    }
+void ControlCenter::wait_until_all_orders_complete() {
+    std::unique_lock<std::mutex> lk(completion_mutex);
+    completion_cv.wait(lk, [this]{
+        return completed_orders.load() == (int)orders.size();
+    });
 }
 
+void ControlCenter::scheduler_loop() {
+    int sim_start_time = 0;
+    current_sim_time_minutes = sim_start_time;
 
-/**
- * @brief Release an order to the assembly station
- * @param order The order to be released
- */
+    for (auto& order : orders) {
+        if (!simulation_running) break;
+        current_sim_time_minutes = order.release_time_minutes;
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        release_order(order);
+    }
+
+    scheduler_done = true;
+    completion_cv.notify_all();
+}
+
 void ControlCenter::release_order(const Order& order) {
     std::stringstream msg;
     msg << format_time(order.release_time_minutes) 
         << " Order released: " << order.product_id 
-        << " (Priority: " << order.priority << ")";
+        << " (Priority: " << order.priority << ", ID: " << order.order_id << ")";
     log_event(msg.str());
-    
+
     if (assembly_station) {
+        assembly_station->set_simulation_time(current_sim_time_minutes.load());
         assembly_station->add_order(order);
     }
 }
 
+void ControlCenter::mark_order_completed(int order_id, int completion_time_minutes) {
+    for (auto& order : orders) {
+        if (order.order_id == order_id) {
+            order.is_completed = true; order.completion_time_minutes = completion_time_minutes;
+            {
+                std::lock_guard<std::mutex> lk(completion_mutex);
+                completed_orders.fetch_add(1);
+            }
+            completion_cv.notify_all();
+            std::stringstream msg; msg << format_time(completion_time_minutes) << " Order completed: " << order.product_id << " (ID: " << order_id << ")"; log_event(msg.str());
+            break;
+        }
+    }
+}
 
-/**
- * @brief Compute Key Performance Indicators (KPIs) after simulation
- */
+void ControlCenter::mark_order_canceled(int order_id) {
+    for (auto& order : orders) {
+        if (order.order_id == order_id) {
+            order.is_canceled = true;
+            {
+                std::lock_guard<std::mutex> lk(completion_mutex);
+                completed_orders.fetch_add(1);
+            }
+            completion_cv.notify_all();
+            std::stringstream msg; msg << format_time(current_sim_time_minutes.load())
+                << " Order canceled: " << order.product_id << " (ID: " << order_id << ")";
+            log_event(msg.str());
+            break;
+        }
+    }
+}
+
 void ControlCenter::compute_kpis() {
     if (orders.empty()) return;
 
-    // Calculate average lead time
-    double total_lead_time = 0.0;
-    int completed_count = 0;
-    
+    double total_lead_time = 0.0; int completed_count = 0; int max_completion_time = 0;
+    int canceled_count = 0;
     for (const auto& order : orders) {
+        if (order.is_canceled) { canceled_count++; continue; }
         if (order.is_completed) {
             int lead_time = order.completion_time_minutes - order.release_time_minutes;
-            total_lead_time += lead_time;
-            completed_count++;
+            total_lead_time += lead_time; completed_count++;
+            if (order.completion_time_minutes > max_completion_time) max_completion_time = order.completion_time_minutes;
         }
     }
-    
-    double avg_lead_time = (completed_count > 0) ? 
-        (total_lead_time / completed_count) : 0.0;
-    
-    // Calculate assembly station utilization
-    int total_sim_time = current_sim_time_minutes;
-    if (total_sim_time == 0) {
-        // Use last completion time if available
-        for (const auto& order : orders) {
-            if (order.is_completed && order.completion_time_minutes > total_sim_time) {
-                total_sim_time = order.completion_time_minutes;
+
+    double avg_lead_time = (completed_count > 0) ? (total_lead_time / completed_count) : 0.0;
+    int first_release_time = orders.empty() ? 0 : orders[0].release_time_minutes;
+    int total_sim_time = max_completion_time - first_release_time;
+    if (total_sim_time <= 0) { total_sim_time = current_sim_time_minutes.load(); if (total_sim_time <= 0) total_sim_time = 1; }
+
+    int station_busy_time = assembly_station ? assembly_station->get_total_busy_time() : 0;
+    double station_utilization = (double)station_busy_time / total_sim_time;
+    double throughput = (completed_count * 60.0) / total_sim_time;
+
+    int total_agv_busy_time = 0; int num_agvs = (agv_fleet) ? (int)agv_fleet->size() : 1;
+    if (agv_fleet) { for (auto* agv : *agv_fleet) { total_agv_busy_time += agv->busy_time_minutes.load(); } }
+    double agv_utilization = (double)total_agv_busy_time / (num_agvs * total_sim_time);
+
+    if (enable_diag_logs) {
+        std::stringstream diag;
+        diag << "[Diag] totals: total_agv_busy_time=" << total_agv_busy_time
+             << ", num_agvs=" << num_agvs
+             << ", total_sim_time=" << total_sim_time
+             << ", station_busy_time=" << station_busy_time
+             << ", completed_count=" << completed_count
+             << ", canceled_count=" << canceled_count;
+        log_event(diag.str());
+        if (agv_fleet) {
+            for (auto* agv : *agv_fleet) {
+                std::stringstream per;
+                per << "[Diag] AGV" << agv->get_id() << " busy_time_minutes="
+                    << agv->busy_time_minutes.load()
+                    << ", total_operations=" << agv->total_operations.load();
+                log_event(per.str());
             }
         }
-        if (total_sim_time == 0) total_sim_time = 1; // Avoid division by zero
     }
-    
-    int station_busy_time = 0;
-    if (assembly_station) {
-        station_busy_time = assembly_station->get_total_busy_time();
-    }
-    double station_utilization = (double)station_busy_time / total_sim_time;
-    
-    // Calculate throughput (orders per hour)
-    double throughput = (completed_count * 60.0) / total_sim_time;
-    
-    // Calculate AGV utilization
-    int total_agv_busy_time = 0;
-    if (agv_fleet) {
-        for (auto* agv : *agv_fleet) {
-            total_agv_busy_time += agv->busy_time_minutes;
-        }
-    }
-    int num_agvs = (agv_fleet) ? agv_fleet->size() : 1;
-    double agv_utilization = (double)total_agv_busy_time / (num_agvs * total_sim_time);
-    
-    // Write KPI report
+
     write_kpi_report(avg_lead_time, station_utilization, throughput, agv_utilization);
-    
-    log_event("KPIs computed and saved");
 }
 
-
-/**
- * @brief Write KPI report to file
- * @param avg_lead_time Average lead time in minutes
- * @param station_utilization Assembly station utilization (0.0 - 1.0)
- * @param throughput Throughput in orders per hour
- * @param agv_utilization AGV utilization (0.0 - 1.0)
- */
-void ControlCenter::write_kpi_report(double avg_lead_time,
-                                     double station_utilization,
-                                     double throughput,
-                                     double agv_utilization) {
-    FileHandler::write_kpi_report("output/kpi_report.txt",
-                                   avg_lead_time,
-                                   station_utilization,
-                                   throughput,
-                                   agv_utilization);
+void ControlCenter::write_kpi_report(double avg_lead_time, double station_utilization, double throughput, double agv_utilization) {
+    FileHandler::write_kpi_report("output/kpi_report.txt", avg_lead_time, station_utilization, throughput, agv_utilization);
 }
 
-
-/**
- * @brief Log an event with timestamp
- * @param message The event message to log
- */
 void ControlCenter::log_event(const std::string& message) {
     std::lock_guard<std::mutex> lock(log_mutex);
     std::string time_str = format_time(current_sim_time_minutes.load());
-    
-    if (log_file.is_open()) {
-        log_file << time_str << " " << message << std::endl;
-        log_file.flush();
-    }
-    
-    // Also print to console
+    if (log_file.is_open()) { log_file << time_str << " " << message << std::endl; log_file.flush(); }
     std::cout << time_str << " " << message << std::endl;
 }
 
-/**
- * @brief Format time in minutes to HH:MM string
- * @param minutes Time in minutes from midnight
- * @return Formatted time string
- */
 std::string ControlCenter::format_time(int minutes) const {
-    int hours = minutes / 60;
-    int mins = minutes % 60;
-    std::stringstream ss;
-    ss << std::setfill('0') << std::setw(2) << hours << ":"
-       << std::setfill('0') << std::setw(2) << mins;
-    return ss.str();
+    int hours = minutes / 60; int mins = minutes % 60; std::stringstream ss;
+    ss << std::setfill('0') << std::setw(2) << hours << ":" << std::setfill('0') << std::setw(2) << mins; return ss.str();
 }
-/*******************************End of ControlCenter Methods***************************/

@@ -1,0 +1,10 @@
+^D:\TAREK\PADOVA STUDY\EMBEDDED_SYSTEMS\PROJECT\EMBEDDED_SYSTEM_FINAL_PROJECT\CMAKELISTS.TXT
+setlocal
+"D:\Tarek\Padova study\Embedded_systems\bin\cmake.exe" "-SD:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project" "-BD:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project" --check-stamp-file "D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

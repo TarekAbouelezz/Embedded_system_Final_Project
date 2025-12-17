@@ -1,0 +1,283 @@
+﻿/**
+ * @file AssemblyStation.cpp
+ * @brief Assembly Station implementation
+ */
+
+/******************************Project Headers*****************************************/
+#include "AssemblyStation.h"
+#include "ControlCenter.h"
+#include "AGV.h"
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <map>
+#include <string>
+#include <algorithm>
+/*************************************************************************************/
+
+
+/**************************AssemblyStation Methods***********************************/
+
+/**
+ * @brief Constructor for AssemblyStation
+ * @param wh Pointer to the Warehouse instance
+ * @param fleet Pointer to the vector of AGV pointers
+ * @return void
+ */
+AssemblyStation::AssemblyStation(Warehouse* wh, std::vector<AGV*>* fleet)
+    : warehouse(wh),
+      agv_fleet(fleet),
+      control_center(nullptr),
+      products(nullptr),
+      running(false),
+      current_sim_time_minutes(0),
+      setup_time_minutes(5),
+      total_busy_time_minutes(0),
+      orders_completed(0) {
+}
+
+
+/**
+ * @brief Destructor for AssemblyStation
+ */
+AssemblyStation::~AssemblyStation() {
+    stop();
+    if (station_thread.joinable()) {
+        station_thread.join();
+    }
+}
+
+
+/**
+ * @brief Start the assembly station processing thread
+ */
+void AssemblyStation::start() {
+    running = true;
+    station_thread = std::thread(&AssemblyStation::process_orders, this);  //Wait for orders
+}
+
+
+/**
+ * @brief Stop the assembly station processing thread
+ */
+void AssemblyStation::stop() {
+    running = false;
+    order_cv.notify_all();      //Signal orders to stop
+} 
+
+
+/**
+ * @brief Main processing loop for assembly station
+ */
+void AssemblyStation::process_orders() {
+    while (running) {
+        std::unique_lock<std::mutex> lock(queue_mutex);  //wait running
+        
+        // Wait for orders
+        order_cv.wait(lock, [this] {
+            return !running || !order_queue.empty(); 
+        });
+        
+        if (!running && order_queue.empty()) break;
+        
+        if (order_queue.empty()) continue;
+        
+        Order order = order_queue.front();
+        order_queue.pop();
+        lock.unlock();
+        
+        // Request components - need product BOM
+        if (request_components(order.product_id)) {
+            // Calculate operation time
+            int operation_time = calculate_operation_time(order.product_id);
+            
+            // Use max of current time and order release time as start time
+            int order_start_time = std::max(current_sim_time_minutes.load(), 
+                                            order.release_time_minutes);
+            
+            // Simulate assembly (sequential processing)
+            total_busy_time_minutes += operation_time;
+            std::this_thread::sleep_for(std::chrono::milliseconds(operation_time * 10));
+            
+            // Calculate completion time (start time + operation time)
+            int completion_time = order_start_time + operation_time;
+            
+            // Update simulation time to completion time (for next order)
+            current_sim_time_minutes = completion_time;
+            
+            orders_completed++;
+            
+            // Report order completion to ControlCenter
+            if (control_center) {
+                control_center->mark_order_completed(order.order_id, completion_time);
+            }
+            
+            // Add finished product to warehouse
+            warehouse->add_finished_product(order.product_id);
+        }
+    }
+}
+
+
+/**
+ * @brief Request components for a product from the warehouse
+ * @param product_id ID of the product to assemble
+ * @return true if components were successfully requested, false otherwise
+ */
+bool AssemblyStation::request_components(const std::string& product_id) {
+    if (!products) {
+        return false;
+    }
+    
+    auto it = products->find(product_id);  // Find product BOM
+    if (it == products->end()) {
+        return false;
+    }
+    
+    const Product& product = it->second;  // Get product details
+    
+    // Reserve components (this also checks availability)
+    if (!warehouse->reserve_components(product.bom)) {
+        return false;
+    }
+    
+    // Assign AGVs to transport components
+    if (!agv_fleet || agv_fleet->empty()) {
+        warehouse->reserve_components(product.bom); // Rollback - simplified
+        return false;
+    }
+
+    // Initialize pending deliveries
+    {
+        std::lock_guard<std::mutex> lk(delivery_mutex);
+        pending_deliveries.clear();
+        for (const auto& kv : product.bom) {
+            // One unit per task; we need kv.second tasks
+            pending_deliveries[kv.first] = kv.second;
+        }
+    }
+    
+    // Assign AGV tasks for each component unit
+    int agv_index = 0;
+    for (const auto& component : product.bom) {
+        const std::string& comp_id = component.first;
+        int qty = component.second;
+        for (int q = 0; q < qty; ++q) {
+            bool assigned = false;
+            // Try to find an idle AGV; if none, wait briefly and retry
+            for (int retry = 0; retry < 50 && !assigned; ++retry) {
+                for (size_t i = 0; i < agv_fleet->size(); i++) {
+                    AGV* agv = (*agv_fleet)[(agv_index + i) % agv_fleet->size()];  // Round-robin
+                    if (agv->is_idle()) {
+                        agv->assign_task(comp_id, 1, "ASSEMBLY_STATION", this);
+                        assigned = true;
+                        agv_index = (agv_index + i + 1) % agv_fleet->size();
+                        break;
+                    }
+                }
+                if (!assigned) {
+                    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+                }
+            }
+            if (!assigned) {
+                // Could not assign now; push back simple delay and try again later
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                --q; // retry this unit
+            }
+        }
+    }
+    
+    // Wait for all components to be delivered
+    wait_for_components(product_id);
+    
+    return true;
+}
+
+
+/**
+ * @brief Wait for components to be delivered by AGVs
+ * @param product_id ID of the product to assemble
+ */
+void AssemblyStation::wait_for_components(const std::string& /*product_id*/) {
+    std::unique_lock<std::mutex> lk(delivery_mutex);
+    delivery_cv.wait(lk, [this] {
+        for (const auto& kv : pending_deliveries) {
+            if (kv.second > 0) return false; // still waiting
+        }
+        return true; // all delivered
+    });
+}
+
+
+/**
+ * @brief Called by AGV when a component unit is delivered
+ */
+void AssemblyStation::notify_component_delivered(const std::string& component_id, int quantity) {
+    std::lock_guard<std::mutex> lk(delivery_mutex);
+    auto it = pending_deliveries.find(component_id);
+    if (it != pending_deliveries.end()) {
+        it->second -= quantity;
+        if (it->second <= 0) it->second = 0;
+    }
+    // If all delivered, notify waiter
+    bool all_done = true;
+    for (const auto& kv : pending_deliveries) {
+        if (kv.second > 0) { all_done = false; break; }
+    }
+    if (all_done) {
+        delivery_cv.notify_all();
+    }
+}
+
+
+/**
+ * @brief Calculate the operation time for assembling a product
+ * @param product_id ID of the product
+ * @return Operation time in minutes
+ */
+int AssemblyStation::calculate_operation_time(const std::string& product_id) {
+    if (!products) {
+        return 30 + setup_time_minutes; // Default fallback
+    }
+    
+    auto it = products->find(product_id);
+    if (it == products->end()) {
+        return 30 + setup_time_minutes; // Default fallback
+    }
+    
+    // T_op = T_base + T_setup
+    return it->second.base_assembly_time_minutes + setup_time_minutes;
+}
+
+
+/**
+ * @brief Add a new order to the assembly station queue
+ * @param order The order to add
+ */
+void AssemblyStation::add_order(const Order& order) {
+    std::lock_guard<std::mutex> lock(queue_mutex);  //wait a new order 
+    order_queue.push(order);
+    order_cv.notify_one();  //signal a new order
+}
+
+
+
+/**
+ * @brief Set the current simulation time in minutes
+ * @param minutes Current simulation time
+ */
+void AssemblyStation::set_simulation_time(int minutes) {
+    current_sim_time_minutes = minutes;
+}
+
+
+/**
+ * @brief Check if the assembly station is currently processing an order
+ * @return true if processing, false otherwise
+ */
+bool AssemblyStation::is_processing() const {
+    std::lock_guard<std::mutex> lock(queue_mutex);
+    return !order_queue.empty();
+}
+/*************************************************************************************/
+

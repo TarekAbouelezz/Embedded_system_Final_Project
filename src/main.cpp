@@ -22,7 +22,7 @@
 /*************************************************************************************/
 
 /********************************Variables********************************************/
-const int NUM_AGVS = 10;  // Minimum required: 10 (use 2 for debugging)
+const int NUM_AGVS = 20;  // Use 2 AGVs for debugging (set to >=10 to meet assignment requirement)
 const std::string ORDERS_FILE = "input/orders.txt";
 const std::string BOM_FILE = "input/bom.txt";
 const std::string WAREHOUSE_FILE = "input/warehouse.txt";
@@ -57,55 +57,48 @@ int main(int argc, char* argv[]) {
         std::cerr << "Error: Failed to load orders file: " << ORDERS_FILE << std::endl;
         return 1;
     }
-    std::cout << "  ✓ Loaded orders from " << ORDERS_FILE << std::endl;
+    std::cout << "   Loaded orders from " << ORDERS_FILE << std::endl;
     
     if (!control_center.load_bom(BOM_FILE)) {
         std::cerr << "Error: Failed to load BOM file: " << BOM_FILE << std::endl;
         return 1;
     }
-    std::cout << "  ✓ Loaded BOM from " << BOM_FILE << std::endl;
+    std::cout << "   Loaded BOM from " << BOM_FILE << std::endl;
     
     if (!control_center.load_warehouse(WAREHOUSE_FILE, &warehouse)) {
         std::cerr << "Error: Failed to load warehouse file: " << WAREHOUSE_FILE << std::endl;
         return 1;
     }
-    std::cout << "  ✓ Loaded warehouse inventory from " << WAREHOUSE_FILE << std::endl;
+    std::cout << "   Loaded warehouse inventory from " << WAREHOUSE_FILE << std::endl;
     
-    // Create AGV fleet
+    // Create AGV fleet (threads will be started by ControlCenter)
     std::cout << "\nInitializing AGV fleet (" << NUM_AGVS << " AGVs)...\n";
     for (int i = 1; i <= NUM_AGVS; i++) {
         AGV* agv = new AGV(i);
         agv_fleet.push_back(agv);
-        agv->start();
-        std::cout << "  ✓ AGV" << i << " initialized\n";
+        std::cout << "   AGV" << i << " initialized\n";
     }
     
     // Set scheduling policy (default: FIFO)
     control_center.set_scheduling_policy(SchedulingPolicy::FIFO);
+
+    // Optional: silence diagnostics for final runs
+    // control_center.set_diag_logging(false);
     
-    // Link products to assembly station
-    assembly_station.set_products(&control_center.get_products());
-    
-    // Start assembly station
-    std::cout << "\nStarting assembly station...\n";
-    assembly_station.start();
-    
-    // Start simulation
+    // Start simulation (ControlCenter wires station and starts all threads)
     std::cout << "\nStarting simulation...\n";
     std::cout << "========================================\n";
     control_center.start_simulation(&assembly_station, &agv_fleet);
     
-    // Wait for simulation to complete
-    // In a real implementation, this would wait until all orders are processed
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    // Wait until all released orders complete instead of sleeping
+    control_center.wait_until_all_orders_complete();
     
-    // Stop all components
+    // Stop everything via ControlCenter (it will stop station and AGVs)
     std::cout << "\nStopping simulation...\n";
     control_center.stop_simulation();
-    assembly_station.stop();
     
+    // Cleanup AGV objects
     for (auto* agv : agv_fleet) {
-        agv->stop();
         delete agv;
     }
     

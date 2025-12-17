@@ -1,0 +1,417 @@
+=== Simulation Log ===
+
+00:00 Simulation started
+08:10 08:10 Order released: P1 (Priority: 1, ID: 1)
+08:15 [Diag] assign_task C1 to AGV1
+08:15 [Diag] assign_task C1 to AGV2
+08:15 [Diag] assign_task C1 to AGV3
+08:15 [Diag] assign_task C1 to AGV4
+08:15 [Diag] assign_task C1 to AGV5
+08:15 [Diag] assign_task C1 to AGV6
+08:15 [Diag] assign_task C1 to AGV7
+08:15 [Diag] assign_task C1 to AGV8
+08:15 [Diag] assign_task C1 to AGV9
+08:15 [Diag] assign_task C1 to AGV10
+08:15 [Diag] assign_task C1 to AGV11
+08:15 [Diag] assign_task C1 to AGV12
+08:15 [Diag] assign_task C3 to AGV13
+08:15 [Diag] assign_task C3 to AGV14
+08:15 [Diag] assign_task C3 to AGV15
+08:15 [Diag] assign_task C3 to AGV16
+08:15 [Diag] wait_for_components start
+08:15 08:15 Order released: P2 (Priority: 3, ID: 2)
+08:45 08:45 Order released: P1 (Priority: 2, ID: 3)
+09:00 09:00 Order released: P2 (Priority: 1, ID: 4)
+09:30 09:30 Order released: P1 (Priority: 3, ID: 5)
+10:00 10:00 Order released: P2 (Priority: 2, ID: 6)
+10:15 10:15 Order released: P1 (Priority: 1, ID: 7)
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] wait_for_components done
+10:15 10:50 Order completed: P1 (ID: 1)
+10:15 [Diag] assign finished product P1 to AGV1
+10:15 [Diag] assign_task C1 to AGV2
+10:15 [Diag] assign_task C1 to AGV3
+10:15 [Diag] assign_task C1 to AGV4
+10:15 [Diag] assign_task C1 to AGV5
+10:15 [Diag] assign_task C1 to AGV6
+10:15 [Diag] assign_task C1 to AGV7
+10:15 [Diag] assign_task C1 to AGV8
+10:15 [Diag] assign_task C2 to AGV9
+10:15 [Diag] assign_task C2 to AGV10
+10:15 [Diag] assign_task C2 to AGV11
+10:15 [Diag] assign_task C2 to AGV12
+10:15 [Diag] assign_task C2 to AGV13
+10:15 [Diag] assign_task C2 to AGV14
+10:15 [Diag] assign_task C2 to AGV15
+10:15 [Diag] assign_task C2 to AGV16
+10:15 [Diag] assign_task C2 to AGV17
+10:15 [Diag] wait_for_components start
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] wait_for_components done
+10:15 11:35 Order completed: P2 (ID: 2)
+10:15 [Diag] assign finished product P2 to AGV1
+10:15 [Diag] assign_task C1 to AGV2
+10:15 [Diag] assign_task C1 to AGV3
+10:15 [Diag] assign_task C1 to AGV4
+10:15 [Diag] assign_task C1 to AGV5
+10:15 [Diag] assign_task C1 to AGV6
+10:15 [Diag] assign_task C1 to AGV7
+10:15 [Diag] assign_task C1 to AGV8
+10:15 [Diag] assign_task C1 to AGV9
+10:15 [Diag] assign_task C1 to AGV10
+10:15 [Diag] assign_task C1 to AGV11
+10:15 [Diag] assign_task C1 to AGV12
+10:15 [Diag] assign_task C1 to AGV13
+10:15 [Diag] assign_task C3 to AGV14
+10:15 [Diag] assign_task C3 to AGV15
+10:15 [Diag] assign_task C3 to AGV16
+10:15 [Diag] assign_task C3 to AGV17
+10:15 [Diag] wait_for_components start
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] wait_for_components done
+10:15 12:10 Order completed: P1 (ID: 3)
+10:15 [Diag] assign finished product P1 to AGV1
+10:15 [Diag] assign_task C1 to AGV2
+10:15 [Diag] assign_task C1 to AGV3
+10:15 [Diag] assign_task C1 to AGV4
+10:15 [Diag] assign_task C1 to AGV5
+10:15 [Diag] assign_task C1 to AGV6
+10:15 [Diag] assign_task C1 to AGV7
+10:15 [Diag] assign_task C1 to AGV8
+10:15 [Diag] assign_task C2 to AGV9
+10:15 [Diag] assign_task C2 to AGV10
+10:15 [Diag] assign_task C2 to AGV11
+10:15 [Diag] assign_task C2 to AGV12
+10:15 [Diag] assign_task C2 to AGV13
+10:15 [Diag] assign_task C2 to AGV14
+10:15 [Diag] assign_task C2 to AGV15
+10:15 [Diag] assign_task C2 to AGV16
+10:15 [Diag] assign_task C2 to AGV17
+10:15 [Diag] wait_for_components start
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] delivered C2 x1
+10:15 [Diag] wait_for_components done
+10:15 12:55 Order completed: P2 (ID: 4)
+10:15 [Diag] assign finished product P2 to AGV1
+10:15 [Diag] assign_task C1 to AGV2
+10:15 [Diag] assign_task C1 to AGV3
+10:15 [Diag] assign_task C1 to AGV4
+10:15 [Diag] assign_task C1 to AGV5
+10:15 [Diag] assign_task C1 to AGV6
+10:15 [Diag] assign_task C1 to AGV7
+10:15 [Diag] assign_task C1 to AGV8
+10:15 [Diag] assign_task C1 to AGV9
+10:15 [Diag] assign_task C1 to AGV10
+10:15 [Diag] assign_task C1 to AGV11
+10:15 [Diag] assign_task C1 to AGV12
+10:15 [Diag] assign_task C1 to AGV13
+10:15 [Diag] assign_task C3 to AGV14
+10:15 [Diag] assign_task C3 to AGV15
+10:15 [Diag] assign_task C3 to AGV16
+10:15 [Diag] assign_task C3 to AGV17
+10:15 [Diag] wait_for_components start
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C3 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] delivered C1 x1
+10:15 [Diag] wait_for_components done
+10:15 13:30 Order completed: P1 (ID: 5)
+10:15 [Diag] assign finished product P1 to AGV1
+10:15 [Diag] request_components failed (attempt 1) requeue order P2
+10:15 [Diag] request_components failed (attempt 1) requeue order P1
+10:15 [Diag] request_components failed (attempt 2) requeue order P2
+10:15 [Diag] request_components failed (attempt 2) requeue order P1
+10:15 [Diag] request_components failed (attempt 3) requeue order P2
+10:15 [Diag] request_components failed (attempt 3) requeue order P1
+10:15 [Diag] request_components failed (attempt 4) requeue order P2
+10:15 [Diag] request_components failed (attempt 4) requeue order P1
+10:15 [Diag] request_components failed (attempt 5) requeue order P2
+10:15 [Diag] request_components failed (attempt 5) requeue order P1
+10:15 [Diag] request_components failed (attempt 6) requeue order P2
+10:15 [Diag] request_components failed (attempt 6) requeue order P1
+10:15 [Diag] request_components failed (attempt 7) requeue order P2
+10:15 [Diag] request_components failed (attempt 7) requeue order P1
+10:15 [Diag] request_components failed (attempt 8) requeue order P2
+10:15 [Diag] request_components failed (attempt 8) requeue order P1
+10:15 [Diag] request_components failed (attempt 9) requeue order P2
+10:15 [Diag] request_components failed (attempt 9) requeue order P1
+10:15 [Diag] request_components failed (attempt 10) requeue order P2
+10:15 [Diag] request_components failed (attempt 10) requeue order P1
+10:15 [Diag] request_components failed (attempt 11) requeue order P2
+10:15 [Diag] request_components failed (attempt 11) requeue order P1
+10:15 [Diag] request_components failed (attempt 12) requeue order P2
+10:15 [Diag] request_components failed (attempt 12) requeue order P1
+10:15 [Diag] request_components failed (attempt 13) requeue order P2
+10:15 [Diag] request_components failed (attempt 13) requeue order P1
+10:15 [Diag] request_components failed (attempt 14) requeue order P2
+10:15 [Diag] request_components failed (attempt 14) requeue order P1
+10:15 [Diag] request_components failed (attempt 15) requeue order P2
+10:15 [Diag] request_components failed (attempt 15) requeue order P1
+10:15 [Diag] request_components failed (attempt 16) requeue order P2
+10:15 [Diag] request_components failed (attempt 16) requeue order P1
+10:15 [Diag] request_components failed (attempt 17) requeue order P2
+10:15 [Diag] request_components failed (attempt 17) requeue order P1
+10:15 [Diag] request_components failed (attempt 18) requeue order P2
+10:15 [Diag] request_components failed (attempt 18) requeue order P1
+10:15 [Diag] request_components failed (attempt 19) requeue order P2
+10:15 [Diag] request_components failed (attempt 19) requeue order P1
+10:15 [Diag] request_components failed (attempt 20) requeue order P2
+10:15 [Diag] request_components failed (attempt 20) requeue order P1
+10:15 [Diag] request_components failed (attempt 21) requeue order P2
+10:15 [Diag] request_components failed (attempt 21) requeue order P1
+10:15 [Diag] request_components failed (attempt 22) requeue order P2
+10:15 [Diag] request_components failed (attempt 22) requeue order P1
+10:15 [Diag] request_components failed (attempt 23) requeue order P2
+10:15 [Diag] request_components failed (attempt 23) requeue order P1
+10:15 [Diag] request_components failed (attempt 24) requeue order P2
+10:15 [Diag] request_components failed (attempt 24) requeue order P1
+10:15 [Diag] request_components failed (attempt 25) requeue order P2
+10:15 [Diag] request_components failed (attempt 25) requeue order P1
+10:15 [Diag] request_components failed (attempt 26) requeue order P2
+10:15 [Diag] request_components failed (attempt 26) requeue order P1
+10:15 [Diag] request_components failed (attempt 27) requeue order P2
+10:15 [Diag] request_components failed (attempt 27) requeue order P1
+10:15 [Diag] request_components failed (attempt 28) requeue order P2
+10:15 [Diag] request_components failed (attempt 28) requeue order P1
+10:15 [Diag] request_components failed (attempt 29) requeue order P2
+10:15 [Diag] request_components failed (attempt 29) requeue order P1
+10:15 [Diag] request_components failed (attempt 30) requeue order P2
+10:15 [Diag] request_components failed (attempt 30) requeue order P1
+10:15 [Diag] request_components failed (attempt 31) requeue order P2
+10:15 [Diag] request_components failed (attempt 31) requeue order P1
+10:15 [Diag] request_components failed (attempt 32) requeue order P2
+10:15 [Diag] request_components failed (attempt 32) requeue order P1
+10:15 [Diag] request_components failed (attempt 33) requeue order P2
+10:15 [Diag] request_components failed (attempt 33) requeue order P1
+10:15 [Diag] request_components failed (attempt 34) requeue order P2
+10:15 [Diag] request_components failed (attempt 34) requeue order P1
+10:15 [Diag] request_components failed (attempt 35) requeue order P2
+10:15 [Diag] request_components failed (attempt 35) requeue order P1
+10:15 [Diag] request_components failed (attempt 36) requeue order P2
+10:15 [Diag] request_components failed (attempt 36) requeue order P1
+10:15 [Diag] request_components failed (attempt 37) requeue order P2
+10:15 [Diag] request_components failed (attempt 37) requeue order P1
+10:15 [Diag] request_components failed (attempt 38) requeue order P2
+10:15 [Diag] request_components failed (attempt 38) requeue order P1
+10:15 [Diag] request_components failed (attempt 39) requeue order P2
+10:15 [Diag] request_components failed (attempt 39) requeue order P1
+10:15 [Diag] request_components failed (attempt 40) requeue order P2
+10:15 [Diag] request_components failed (attempt 40) requeue order P1
+10:15 [Diag] request_components failed (attempt 41) requeue order P2
+10:15 [Diag] request_components failed (attempt 41) requeue order P1
+10:15 [Diag] request_components failed (attempt 42) requeue order P2
+10:15 [Diag] request_components failed (attempt 42) requeue order P1
+10:15 [Diag] request_components failed (attempt 43) requeue order P2
+10:15 [Diag] request_components failed (attempt 43) requeue order P1
+10:15 [Diag] request_components failed (attempt 44) requeue order P2
+10:15 [Diag] request_components failed (attempt 44) requeue order P1
+10:15 [Diag] request_components failed (attempt 45) requeue order P2
+10:15 [Diag] request_components failed (attempt 45) requeue order P1
+10:15 [Diag] request_components failed (attempt 46) requeue order P2
+10:15 [Diag] request_components failed (attempt 46) requeue order P1
+10:15 [Diag] request_components failed (attempt 47) requeue order P2
+10:15 [Diag] request_components failed (attempt 47) requeue order P1
+10:15 [Diag] request_components failed (attempt 48) requeue order P2
+10:15 [Diag] request_components failed (attempt 48) requeue order P1
+10:15 [Diag] request_components failed (attempt 49) requeue order P2
+10:15 [Diag] request_components failed (attempt 49) requeue order P1
+10:15 [Diag] request_components failed (attempt 50) requeue order P2
+10:15 [Diag] request_components failed (attempt 50) requeue order P1
+10:15 [Diag] request_components failed (attempt 51) requeue order P2
+10:15 [Diag] request_components failed (attempt 51) requeue order P1
+10:15 [Diag] request_components failed (attempt 52) requeue order P2
+10:15 [Diag] request_components failed (attempt 52) requeue order P1
+10:15 [Diag] request_components failed (attempt 53) requeue order P2
+10:15 [Diag] request_components failed (attempt 53) requeue order P1
+10:15 [Diag] request_components failed (attempt 54) requeue order P2
+10:15 [Diag] request_components failed (attempt 54) requeue order P1
+10:15 [Diag] request_components failed (attempt 55) requeue order P2
+10:15 [Diag] request_components failed (attempt 55) requeue order P1
+10:15 [Diag] request_components failed (attempt 56) requeue order P2
+10:15 [Diag] request_components failed (attempt 56) requeue order P1
+10:15 [Diag] request_components failed (attempt 57) requeue order P2
+10:15 [Diag] request_components failed (attempt 57) requeue order P1
+10:15 [Diag] request_components failed (attempt 58) requeue order P2
+10:15 [Diag] request_components failed (attempt 58) requeue order P1
+10:15 [Diag] request_components failed (attempt 59) requeue order P2
+10:15 [Diag] request_components failed (attempt 59) requeue order P1
+10:15 [Diag] request_components failed (attempt 60) requeue order P2
+10:15 [Diag] request_components failed (attempt 60) requeue order P1
+10:15 [Diag] request_components failed (attempt 61) requeue order P2
+10:15 [Diag] request_components failed (attempt 61) requeue order P1
+10:15 [Diag] request_components failed (attempt 62) requeue order P2
+10:15 [Diag] request_components failed (attempt 62) requeue order P1
+10:15 [Diag] request_components failed (attempt 63) requeue order P2
+10:15 [Diag] request_components failed (attempt 63) requeue order P1
+10:15 [Diag] request_components failed (attempt 64) requeue order P2
+10:15 [Diag] request_components failed (attempt 64) requeue order P1
+10:15 [Diag] request_components failed (attempt 65) requeue order P2
+10:15 [Diag] request_components failed (attempt 65) requeue order P1
+10:15 [Diag] request_components failed (attempt 66) requeue order P2
+10:15 [Diag] request_components failed (attempt 66) requeue order P1
+10:15 [Diag] request_components failed (attempt 67) requeue order P2
+10:15 [Diag] request_components failed (attempt 67) requeue order P1
+10:15 [Diag] request_components failed (attempt 68) requeue order P2
+10:15 [Diag] request_components failed (attempt 68) requeue order P1
+10:15 [Diag] request_components failed (attempt 69) requeue order P2
+10:15 [Diag] request_components failed (attempt 69) requeue order P1
+10:15 [Diag] request_components failed (attempt 70) requeue order P2
+10:15 [Diag] request_components failed (attempt 70) requeue order P1
+10:15 [Diag] request_components failed (attempt 71) requeue order P2
+10:15 [Diag] request_components failed (attempt 71) requeue order P1
+10:15 [Diag] request_components failed (attempt 72) requeue order P2
+10:15 [Diag] request_components failed (attempt 72) requeue order P1
+10:15 [Diag] request_components failed (attempt 73) requeue order P2
+10:15 [Diag] request_components failed (attempt 73) requeue order P1
+10:15 [Diag] request_components failed (attempt 74) requeue order P2
+10:15 [Diag] request_components failed (attempt 74) requeue order P1
+10:15 [Diag] request_components failed (attempt 75) requeue order P2
+10:15 [Diag] request_components failed (attempt 75) requeue order P1
+10:15 [Diag] request_components failed (attempt 76) requeue order P2
+10:15 [Diag] request_components failed (attempt 76) requeue order P1
+10:15 [Diag] request_components failed (attempt 77) requeue order P2
+10:15 [Diag] request_components failed (attempt 77) requeue order P1
+10:15 [Diag] request_components failed (attempt 78) requeue order P2
+10:15 [Diag] request_components failed (attempt 78) requeue order P1
+10:15 [Diag] request_components failed (attempt 79) requeue order P2
+10:15 [Diag] request_components failed (attempt 79) requeue order P1
+10:15 [Diag] request_components failed (attempt 80) requeue order P2
+10:15 [Diag] request_components failed (attempt 80) requeue order P1
+10:15 [Diag] request_components failed (attempt 81) requeue order P2
+10:15 [Diag] request_components failed (attempt 81) requeue order P1
+10:15 [Diag] request_components failed (attempt 82) requeue order P2
+10:15 [Diag] request_components failed (attempt 82) requeue order P1
+10:15 [Diag] request_components failed (attempt 83) requeue order P2
+10:15 [Diag] request_components failed (attempt 83) requeue order P1
+10:15 [Diag] request_components failed (attempt 84) requeue order P2
+10:15 [Diag] request_components failed (attempt 84) requeue order P1
+10:15 [Diag] request_components failed (attempt 85) requeue order P2
+10:15 [Diag] request_components failed (attempt 85) requeue order P1
+10:15 [Diag] request_components failed (attempt 86) requeue order P2
+10:15 [Diag] request_components failed (attempt 86) requeue order P1
+10:15 [Diag] request_components failed (attempt 87) requeue order P2
+10:15 [Diag] request_components failed (attempt 87) requeue order P1
+10:15 [Diag] request_components failed (attempt 88) requeue order P2
+10:15 [Diag] request_components failed (attempt 88) requeue order P1
+10:15 [Diag] request_components failed (attempt 89) requeue order P2
+10:15 [Diag] request_components failed (attempt 89) requeue order P1
+10:15 [Diag] request_components failed (attempt 90) requeue order P2
+10:15 [Diag] request_components failed (attempt 90) requeue order P1
+10:15 [Diag] request_components failed (attempt 91) requeue order P2
+10:15 [Diag] request_components failed (attempt 91) requeue order P1
+10:15 [Diag] request_components failed (attempt 92) requeue order P2
+10:15 [Diag] request_components failed (attempt 92) requeue order P1
+10:15 [Diag] request_components failed (attempt 93) requeue order P2
+10:15 [Diag] request_components failed (attempt 93) requeue order P1
+10:15 [Diag] request_components failed (attempt 94) requeue order P2
+10:15 [Diag] request_components failed (attempt 94) requeue order P1
+10:15 [Diag] request_components failed (attempt 95) requeue order P2
+10:15 [Diag] request_components failed (attempt 95) requeue order P1
+10:15 [Diag] request_components failed (attempt 96) requeue order P2
+10:15 [Diag] request_components failed (attempt 96) requeue order P1
+10:15 [Diag] request_components failed (attempt 97) requeue order P2
+10:15 [Diag] request_components failed (attempt 97) requeue order P1
+10:15 [Diag] request_components failed (attempt 98) requeue order P2
+10:15 [Diag] request_components failed (attempt 98) requeue order P1
+10:15 [Diag] request_components failed (attempt 99) requeue order P2
+10:15 [Diag] request_components failed (attempt 99) requeue order P1
+10:15 [Diag] request_components failed (attempt 100) requeue order P2
+10:15 [Diag] request_components failed (attempt 100) requeue order P1
+10:15 [Diag] request_components failed permanently for order ID 6
+10:15 10:15 Order canceled: P2 (ID: 6)
+10:15 [Diag] request_components failed permanently for order ID 7
+10:15 10:15 Order canceled: P1 (ID: 7)
+10:15 [Diag] totals: total_agv_busy_time=595, num_agvs=20, total_sim_time=320, station_busy_time=195, completed_count=5, canceled_count=2
+10:15 [Diag] AGV1 busy_time_minutes=42, total_operations=6
+10:15 [Diag] AGV2 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV3 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV4 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV5 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV6 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV7 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV8 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV9 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV10 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV11 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV12 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV13 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV14 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV15 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV16 busy_time_minutes=35, total_operations=5
+10:15 [Diag] AGV17 busy_time_minutes=28, total_operations=4
+10:15 [Diag] AGV18 busy_time_minutes=0, total_operations=0
+10:15 [Diag] AGV19 busy_time_minutes=0, total_operations=0
+10:15 [Diag] AGV20 busy_time_minutes=0, total_operations=0
+10:15 KPIs computed and saved
+10:15 Simulation stopped

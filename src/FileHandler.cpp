@@ -35,6 +35,7 @@ bool FileHandler::read_orders_file(const std::string& filename, std::vector<Orde
     }
     
     std::string line;
+    int order_id = 1;  // Start order IDs from 1
     while (std::getline(file, line)) {
         if (line.empty() || line[0] == '#') continue;
         
@@ -46,6 +47,7 @@ bool FileHandler::read_orders_file(const std::string& filename, std::vector<Orde
             iss >> priority;  // Optional priority
             
             Order order;
+            order.order_id = order_id++;
             order.release_hour = hour;
             order.release_minute = minute;
             order.release_time_minutes = time_to_minutes(hour, minute);
@@ -75,44 +77,53 @@ bool FileHandler::read_bom_file(const std::string& filename, std::map<std::strin
     }
     
     std::string line;
-    Product current_product;
     std::string current_product_id;
     
     while (std::getline(file, line)) {
         if (line.empty() || line[0] == '#') continue;
         
         std::istringstream iss(line);
-        std::string first_token;
-        iss >> first_token;
+        std::vector<std::string> tokens;
+        std::string tok;
+        while (iss >> tok) tokens.push_back(tok);
+        if (tokens.empty()) continue;
         
-        // Check if this is a product definition (product_id + base_time)
-        if (first_token[0] == 'P') {
-            int base_time;
-            if (iss >> base_time) {
-                // Save previous product if exists
-                if (!current_product_id.empty()) {
-                    products[current_product_id] = current_product;
-                }
-                
-                // Start new product
-                current_product_id = first_token;
-                current_product = Product();
-                current_product.product_id = current_product_id;
-                current_product.base_assembly_time_minutes = base_time;
+        // Formats supported:
+        // 1) product_id base_time
+        // 2) product_id component_id quantity
+        // 3) component_id quantity (uses last current_product_id)
+        if (tokens.size() == 2 && tokens[0][0] == 'P') {
+            // product_id base_time
+            std::istringstream bt(tokens[1]);
+            int base_time = 0;
+            if (bt >> base_time && bt.eof()) {
+                current_product_id = tokens[0];
+                Product& p = products[current_product_id];
+                p.product_id = current_product_id;
+                p.base_assembly_time_minutes = base_time;
             }
-        } else if (first_token[0] == 'C') {
-            // Component requirement
-            std::string component_id = first_token;
-            int quantity;
-            if (iss >> quantity && !current_product_id.empty()) {
-                current_product.bom[component_id] = quantity;
+        } else if (tokens.size() == 3 && tokens[0][0] == 'P' && tokens[1][0] == 'C') {
+            // product_id component_id quantity
+            std::istringstream qss(tokens[2]);
+            int qty = 0;
+            if (qss >> qty && qss.eof()) {
+                const std::string& pid = tokens[0];
+                const std::string& cid = tokens[1];
+                Product& p = products[pid];
+                if (p.product_id.empty()) p.product_id = pid;
+                p.bom[cid] = qty;
+                current_product_id = pid;
+            }
+        } else if (tokens.size() == 2 && tokens[0][0] == 'C' && !current_product_id.empty()) {
+            // component_id quantity for current product
+            std::istringstream qss(tokens[1]);
+            int qty = 0;
+            if (qss >> qty && qss.eof()) {
+                const std::string& cid = tokens[0];
+                Product& p = products[current_product_id];
+                p.bom[cid] = qty;
             }
         }
-    }
-    
-    // Save last product
-    if (!current_product_id.empty()) {
-        products[current_product_id] = current_product;
     }
     
     file.close();

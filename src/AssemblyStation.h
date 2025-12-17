@@ -5,28 +5,38 @@
 
 #ifndef ASSEMBLY_STATION_H
 #define ASSEMBLY_STATION_H
-
+/******************************Project Headers*****************************************/
 #include "Order.h"
 #include "Product.h"
 #include "Warehouse.h"
 #include <map>
+/*************************************************************************************/
 
-// Forward declaration
+
+/****************************Forward Declarations*************************************/
 class AGV;
+class ControlCenter;
 #include <vector>
 #include <queue>
 #include <mutex>
 #include <thread>
 #include <atomic>
 #include <condition_variable>
+/*************************************************************************************/
 
+/****************************AssemblyStation Class Definition*************************/
+/**
+ * @class AssemblyStation
+ * @brief Represents an assembly station that processes orders
+ */
 class AssemblyStation {
 private:
     Warehouse* warehouse;
     std::vector<AGV*>* agv_fleet;
+    ControlCenter* control_center;  // For reporting order completion
     std::map<std::string, Product>* products;  // Reference to product BOM
     std::queue<Order> order_queue;
-    std::mutex queue_mutex;
+    mutable std::mutex queue_mutex;
     std::condition_variable order_cv;
     std::thread station_thread;
     std::atomic<bool> running;
@@ -39,6 +49,15 @@ private:
     bool request_components(const std::string& product_id);
     void wait_for_components(const std::string& product_id);
     int calculate_operation_time(const std::string& product_id);
+    
+    // Delivery coordination
+    std::mutex delivery_mutex;
+    std::condition_variable delivery_cv;
+    std::map<std::string, int> pending_deliveries; // component_id -> units remaining
+
+    // Retry control to avoid infinite loops
+    std::map<int, int> retry_counts; // order_id -> attempts
+    const int max_request_retries = 100; // configurable
     
     // Statistics
     int total_busy_time_minutes;
@@ -53,12 +72,17 @@ public:
     void add_order(const Order& order);
     void set_simulation_time(int minutes);
     void set_products(std::map<std::string, Product>* prods) { products = prods; }
+    void set_control_center(ControlCenter* cc) { control_center = cc; }
+
+    // Called by AGVs when units are delivered
+    void notify_component_delivered(const std::string& component_id, int quantity);
+    void notify_finished_product_delivered(const std::string& product_id);
     
     // Statistics
     int get_total_busy_time() const { return total_busy_time_minutes; }
     int get_orders_completed() const { return orders_completed; }
     bool is_processing() const;
 };
-
+/*************************************************************************************/
 #endif /* ASSEMBLY_STATION_H */
 

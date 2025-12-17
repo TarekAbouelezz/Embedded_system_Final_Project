@@ -23,23 +23,20 @@ class AGV;
 #include <thread>
 #include <atomic>
 #include <fstream>
+#include <condition_variable>
 
 /*************************************************************************************/
 
-/****************************User define's variables**********************************/
 /**
  * @enum SchedulingPolicy
  * @brief Enumeration of scheduling policies
  */
 enum class SchedulingPolicy {
-    FIFO,     // First In First Out (0)
-    PRIORITY, // Highest Priority First (1)
-    SPT,      // Shortest Processing Time (2)
-    EDD       // Earliest Due Date (3)
+    FIFO,
+    PRIORITY,
+    SPT,
+    EDD
 };
-
-/*************************************************************************************/
-/****************************ControlCenter Class Definition***************************/
 
 /**
  * @class ControlCenter
@@ -53,12 +50,21 @@ private:
     std::vector<AGV*>* agv_fleet;
     
     SchedulingPolicy policy;
-    std::atomic<int> current_sim_time_minutes; // Current simulation time in minutes
-    std::atomic<bool> simulation_running;      // Flag to control simulation
+    std::atomic<int> current_sim_time_minutes;
+    std::atomic<bool> simulation_running;
+    std::atomic<bool> has_stopped;
     std::thread scheduler_thread;
     std::mutex log_mutex;
-    std::ofstream log_file;                   
-    /*************Functions***********************/
+    std::ofstream log_file;
+
+    // Completion coordination
+    std::mutex completion_mutex;
+    std::condition_variable completion_cv;
+    std::atomic<int> completed_orders;
+    std::atomic<bool> scheduler_done;
+
+    bool enable_diag_logs;
+
     void scheduler_loop();
     void release_order(const Order& order);
     void compute_kpis();
@@ -66,34 +72,32 @@ private:
                           double station_utilization,
                           double throughput,
                           double agv_utilization);
-    
-    // Logging
-    void log_event(const std::string& message);
     std::string format_time(int minutes) const;
-    /*********************************************/
 public:
     ControlCenter();
     ~ControlCenter();
-    
-    /******************User Functions************************/
+
     bool load_orders(const std::string& filename);
     bool load_bom(const std::string& filename);
     bool load_warehouse(const std::string& filename, Warehouse* warehouse);
-    /********************************************************/
 
-    /******************Simulation Control************************/
     void start_simulation(AssemblyStation* station, std::vector<AGV*>* fleet);
     void stop_simulation();
     void set_scheduling_policy(SchedulingPolicy pol) { policy = pol; }
+    
+    void mark_order_completed(int order_id, int completion_time_minutes);
+    void mark_order_canceled(int order_id);
+    void wait_until_all_orders_complete();
     
     std::vector<Order>& get_orders() { return orders; }
     std::map<std::string, Product>& get_products() { return products; }
     
     int get_simulation_time() const { return current_sim_time_minutes.load(); }
     void set_simulation_time(int minutes) { current_sim_time_minutes = minutes; }
-    /********************************************************/
+
+    void log_event(const std::string& message);
+    void set_diag_logging(bool enabled) { enable_diag_logs = enabled; }
 };
 
-/*************************************************************************************/
 #endif /* CONTROL_CENTER_H */
 

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\Warehouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\AGV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\AssemblyStation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\ControlCenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\FileHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\Order.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\Product.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\Warehouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\AGV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\AssemblyStation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\ControlCenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\src\FileHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Tarek\Padova study\Embedded_systems\Project\Embedded_system_Final_Project\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C16154FC-C02A-3FC8-8824-4FFCB8DE9AA3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E3BA7E0B-4135-3E87-B9A7-D09A5A1DA76B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
