@@ -1,0 +1,1429 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/"
+    found: "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+      ENV{INCLUDE}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\include"
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\ATLMFC\\include"
+        - "D:\\downloads\\VS\\installation\\VC\\Auxiliary\\VS\\include"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\um"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\shared"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\winrt"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\cppwinrt"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.0.5+e22287bf1 for .NET Framework
+      Build started 12/17/2025 12:17:05 PM.
+      
+      Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\4.2.1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\4.2.1\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\4.2.1\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:03.50
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/4.2.1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "D:/downloads/VS/installation/Common7/IDE/"
+      - "D:/downloads/VS/installation/Common7/Tools/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/"
+      - "D:/Github/Git/cmd/"
+      - "D:/MYSS2/ucrt64/bin/"
+      - "D:/downloads/cursor/cursor/resources/app/bin/"
+      - "C:/Program Files/GitHub CLI/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "D:/C /"
+    searched_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "D:/downloads/VS/installation/Common7/IDE/"
+      - "D:/downloads/VS/installation/Common7/Tools/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/"
+      - "D:/Github/Git/cmd/"
+      - "D:/MYSS2/ucrt64/bin/"
+      - "D:/downloads/cursor/cursor/resources/app/bin/"
+      - "C:/Program Files/GitHub CLI/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "D:/C /"
+    searched_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/lld-link.com"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/lld-link.exe"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/lld-link.com"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/lld-link.exe"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/lld-link"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/lld-link.com"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/lld-link.exe"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/lld-link.com"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/lld-link.exe"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/lld-link"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link.com"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link.exe"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/lld-link"
+      - "D:/downloads/VS/installation/Common7/Tools/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/Tools/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/Tools/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/lld-link.com"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/lld-link.exe"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/lld-link"
+      - "C:/msys64/mingw64/bin/lld-link.com"
+      - "C:/msys64/mingw64/bin/lld-link.exe"
+      - "C:/msys64/mingw64/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/lld-link.com"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/lld-link.exe"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/lld-link"
+      - "D:/Github/Git/cmd/lld-link.com"
+      - "D:/Github/Git/cmd/lld-link.exe"
+      - "D:/Github/Git/cmd/lld-link"
+      - "D:/MYSS2/ucrt64/bin/lld-link.com"
+      - "D:/MYSS2/ucrt64/bin/lld-link.exe"
+      - "D:/MYSS2/ucrt64/bin/lld-link"
+      - "D:/downloads/cursor/cursor/resources/app/bin/lld-link.com"
+      - "D:/downloads/cursor/cursor/resources/app/bin/lld-link.exe"
+      - "D:/downloads/cursor/cursor/resources/app/bin/lld-link"
+      - "C:/Program Files/GitHub CLI/lld-link.com"
+      - "C:/Program Files/GitHub CLI/lld-link.exe"
+      - "C:/Program Files/GitHub CLI/lld-link"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/lld-link.com"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/lld-link.exe"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/lld-link.com"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/lld-link.exe"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/lld-link"
+      - "D:/C /lld-link.com"
+      - "D:/C /lld-link.exe"
+      - "D:/C /lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "D:/downloads/VS/installation/Common7/IDE/"
+      - "D:/downloads/VS/installation/Common7/Tools/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/"
+      - "D:/Github/Git/cmd/"
+      - "D:/MYSS2/ucrt64/bin/"
+      - "D:/downloads/cursor/cursor/resources/app/bin/"
+      - "C:/Program Files/GitHub CLI/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "D:/C /"
+    searched_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "D:/downloads/VS/installation/Common7/IDE/"
+      - "D:/downloads/VS/installation/Common7/Tools/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/"
+      - "D:/Github/Git/cmd/"
+      - "D:/MYSS2/ucrt64/bin/"
+      - "D:/downloads/cursor/cursor/resources/app/bin/"
+      - "C:/Program Files/GitHub CLI/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "D:/C /"
+    searched_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/mt.com"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/mt.exe"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/mt"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/mt.com"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/mt.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/mt"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/mt.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/mt.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/mt"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/mt.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/mt.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/mt"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/mt.com"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/mt.exe"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/mt"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/mt.com"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/mt.exe"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/mt"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/mt.com"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/mt.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/mt.com"
+    found: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/mt.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "D:/downloads/VS/installation/Common7/IDE/"
+      - "D:/downloads/VS/installation/Common7/Tools/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/"
+      - "D:/Github/Git/cmd/"
+      - "D:/MYSS2/ucrt64/bin/"
+      - "D:/downloads/cursor/cursor/resources/app/bin/"
+      - "C:/Program Files/GitHub CLI/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "D:/C /"
+    searched_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
+    found: "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/"
+    found: "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+      ENV{INCLUDE}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\include"
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\ATLMFC\\include"
+        - "D:\\downloads\\VS\\installation\\VC\\Auxiliary\\VS\\include"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\um"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\shared"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\winrt"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\cppwinrt"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.0.5+e22287bf1 for .NET Framework
+      Build started 12/17/2025 12:17:09 PM.
+      
+      Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\4.2.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\4.2.1\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\4.2.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.37
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/4.2.1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "D:/downloads/VS/installation/Common7/IDE/"
+      - "D:/downloads/VS/installation/Common7/Tools/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/"
+      - "D:/Github/Git/cmd/"
+      - "D:/MYSS2/ucrt64/bin/"
+      - "D:/downloads/cursor/cursor/resources/app/bin/"
+      - "C:/Program Files/GitHub CLI/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "D:/C /"
+    searched_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/lld-link.com"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/lld-link.exe"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/lld-link"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/lld-link.com"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/lld-link.exe"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/lld-link"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/lld-link.com"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/lld-link.exe"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/lld-link"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/lld-link.com"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/lld-link.exe"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/lld-link"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link.com"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link.exe"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/lld-link"
+      - "D:/downloads/VS/installation/Common7/IDE/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/IDE/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/lld-link"
+      - "D:/downloads/VS/installation/Common7/Tools/lld-link.com"
+      - "D:/downloads/VS/installation/Common7/Tools/lld-link.exe"
+      - "D:/downloads/VS/installation/Common7/Tools/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/lld-link"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/lld-link.com"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/lld-link.exe"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/lld-link"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/lld-link.com"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/lld-link.exe"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/lld-link"
+      - "C:/msys64/mingw64/bin/lld-link.com"
+      - "C:/msys64/mingw64/bin/lld-link.exe"
+      - "C:/msys64/mingw64/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/lld-link.com"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/lld-link.exe"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/lld-link"
+      - "D:/Github/Git/cmd/lld-link.com"
+      - "D:/Github/Git/cmd/lld-link.exe"
+      - "D:/Github/Git/cmd/lld-link"
+      - "D:/MYSS2/ucrt64/bin/lld-link.com"
+      - "D:/MYSS2/ucrt64/bin/lld-link.exe"
+      - "D:/MYSS2/ucrt64/bin/lld-link"
+      - "D:/downloads/cursor/cursor/resources/app/bin/lld-link.com"
+      - "D:/downloads/cursor/cursor/resources/app/bin/lld-link.exe"
+      - "D:/downloads/cursor/cursor/resources/app/bin/lld-link"
+      - "C:/Program Files/GitHub CLI/lld-link.com"
+      - "C:/Program Files/GitHub CLI/lld-link.exe"
+      - "C:/Program Files/GitHub CLI/lld-link"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/lld-link.com"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/lld-link.exe"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/lld-link.com"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/lld-link.exe"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/lld-link"
+      - "D:/C /lld-link.com"
+      - "D:/C /lld-link.exe"
+      - "D:/C /lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+  -
+    kind: "find-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:580 (enable_language)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:553 (__windows_compiler_msvc_enable_rc)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/x86/"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/"
+      - "C:/Windows/Microsoft.NET/Framework/v4.0.30319/"
+      - "D:/downloads/VS/installation/Common7/IDE/"
+      - "D:/downloads/VS/installation/Common7/Tools/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/opl/oplide/"
+      - "D:/Tarek/Padova study/Design/simulation/cplex/bin/x64_win64/"
+      - "D:/Tarek/Padova study/Design/simulation/cpoptimizer/bin/x64_win64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR/"
+      - "D:/study/Embedded_debloma_ABD ELGhafar/Mplab/bin/"
+      - "C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/"
+      - "D:/Github/Git/cmd/"
+      - "D:/MYSS2/ucrt64/bin/"
+      - "D:/downloads/cursor/cursor/resources/app/bin/"
+      - "C:/Program Files/GitHub CLI/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Users/OKTA/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "D:/C /"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "D:/Tarek/Padova study/Embedded_systems/bin/"
+      - "D:/Tarek/Padova study/Embedded_systems/sbin/"
+      - "D:/Tarek/Padova study/Embedded_systems/"
+      - "C:/Program Files/FlexibleAssemblySystem/bin/"
+      - "C:/Program Files/FlexibleAssemblySystem/sbin/"
+      - "C:/Program Files/FlexibleAssemblySystem/"
+    searched_directories:
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/rc.com"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/rc.exe"
+      - "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/Hostx86/x86/rc"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/rc.com"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/rc.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/VC/vcpackages/rc"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/rc.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/rc.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TestWindow/rc"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/rc.com"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/rc.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/CommonExtensions/Microsoft/TeamFoundation/Team Explorer/rc"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/rc.com"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/rc.exe"
+      - "D:/downloads/VS/installation/MSBuild/Current/Bin/Roslyn/rc"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/rc.com"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/rc.exe"
+      - "D:/downloads/VS/installation/Team Tools/DiagnosticsHub/Collector/rc"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/rc.com"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/rc.exe"
+      - "D:/downloads/VS/installation/Common7/IDE/Extensions/Microsoft/CodeCoverage.Console/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/rc.com"
+    found: "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/rc.exe"
+    search_context:
+      ENV{PATH}:
+        - "D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX86\\x86"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\VC\\VCPackages"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer"
+        - "D:\\downloads\\VS\\installation\\MSBuild\\Current\\bin\\Roslyn"
+        - "D:\\downloads\\VS\\installation\\Team Tools\\DiagnosticsHub\\Collector"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\Extensions\\Microsoft\\CodeCoverage.Console"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x86"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86"
+        - "D:\\downloads\\VS\\installation\\\\MSBuild\\Current\\Bin\\amd64"
+        - "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319"
+        - "D:\\downloads\\VS\\installation\\Common7\\IDE\\"
+        - "D:\\downloads\\VS\\installation\\Common7\\Tools\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\opl\\oplide\\"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cplex\\bin\\x64_win64"
+        - "D:\\Tarek\\Padova study\\Design\\simulation\\cpoptimizer\\bin\\x64_win64"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR"
+        - "D:\\study\\Embedded_debloma_ABD ELGhafar\\Mplab\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "D:\\Github\\Git\\cmd"
+        - "D:\\MYSS2\\ucrt64\\bin"
+        - "D:\\downloads\\cursor\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\GitHub CLI\\"
+        - "D:\\Tarek\\Padova study\\Embedded_systems\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Users\\OKTA\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "D:\\C "
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/FlexibleAssemblySystem"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "D:/Tarek/Padova study/Embedded_systems"
+        - "C:/Program Files/FlexibleAssemblySystem"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-5jnz9i"
+      binary: "D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-5jnz9i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-5jnz9i'
+        
+        Run Build Command(s): D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8348a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.0.5+e22287bf1 for .NET Framework
+        Build started 12/17/2025 12:17:11 PM.
+        
+        Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-5jnz9i\\cmTC_8348a.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-5jnz9i\\Debug\\".
+          Creating directory "cmTC_8348a.dir\\Debug\\cmTC_8348a.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_8348a.dir\\Debug\\cmTC_8348a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8348a.dir\\Debug\\cmTC_8348a.tlog\\unsuccessfulbuild".
+        ClCompile:
+          D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_8348a.dir\\Debug\\\\" /Fd"cmTC_8348a.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "D:\\Tarek\\Padova study\\Embedded_systems\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35721 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_8348a.dir\\Debug\\\\" /Fd"cmTC_8348a.dir\\Debug\\vc145.pdb" /external:W3 /TC /errorReport:queue "D:\\Tarek\\Padova study\\Embedded_systems\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-5jnz9i\\Debug\\cmTC_8348a.exe" /INCREMENTAL /ILK:"cmTC_8348a.dir\\Debug\\cmTC_8348a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-5jnz9i/Debug/cmTC_8348a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-5jnz9i/Debug/cmTC_8348a.lib" /MACHINE:X64  /machine:x64 cmTC_8348a.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_8348a.vcxproj -> D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-5jnz9i\\Debug\\cmTC_8348a.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_8348a.dir\\Debug\\cmTC_8348a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_8348a.dir\\Debug\\cmTC_8348a.tlog\\cmTC_8348a.lastbuildstate".
+        Done Building Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-5jnz9i\\cmTC_8348a.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.99
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35721.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-6kndmp"
+      binary: "D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-6kndmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-6kndmp'
+        
+        Run Build Command(s): D:/downloads/VS/installation/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_83a8e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.0.5+e22287bf1 for .NET Framework
+        Build started 12/17/2025 12:17:13 PM.
+        
+        Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-6kndmp\\cmTC_83a8e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-6kndmp\\Debug\\".
+          Creating directory "cmTC_83a8e.dir\\Debug\\cmTC_83a8e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_83a8e.dir\\Debug\\cmTC_83a8e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_83a8e.dir\\Debug\\cmTC_83a8e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_83a8e.dir\\Debug\\\\" /Fd"cmTC_83a8e.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "D:\\Tarek\\Padova study\\Embedded_systems\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35721 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_83a8e.dir\\Debug\\\\" /Fd"cmTC_83a8e.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "D:\\Tarek\\Padova study\\Embedded_systems\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          D:\\downloads\\VS\\installation\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-6kndmp\\Debug\\cmTC_83a8e.exe" /INCREMENTAL /ILK:"cmTC_83a8e.dir\\Debug\\cmTC_83a8e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-6kndmp/Debug/cmTC_83a8e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/CMakeScratch/TryCompile-6kndmp/Debug/cmTC_83a8e.lib" /MACHINE:X64  /machine:x64 cmTC_83a8e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_83a8e.vcxproj -> D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-6kndmp\\Debug\\cmTC_83a8e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_83a8e.dir\\Debug\\cmTC_83a8e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_83a8e.dir\\Debug\\cmTC_83a8e.tlog\\cmTC_83a8e.lastbuildstate".
+        Done Building Project "D:\\Tarek\\Padova study\\Embedded_systems\\Project\\Embedded_system_Final_Project\\CMakeFiles\\CMakeScratch\\TryCompile-6kndmp\\cmTC_83a8e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.10
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "D:/Tarek/Padova study/Embedded_systems/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "D:/downloads/VS/installation/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35721.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...

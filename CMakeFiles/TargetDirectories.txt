@@ -1,0 +1,3 @@
+D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/fas_simulator.dir
+D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/ALL_BUILD.dir
+D:/Tarek/Padova study/Embedded_systems/Project/Embedded_system_Final_Project/CMakeFiles/ZERO_CHECK.dir
